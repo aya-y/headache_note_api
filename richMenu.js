@@ -37,7 +37,7 @@ const richmenu = {
 
 const createRichMenu = async() => {
     const richMenuId = await client.createRichMenu(richmenu)
-    const result =  client.setRichMenuImage(richMenuId, fs.createReadStream('./images/icons_calendar.png'))
+    const result =  await client.setRichMenuImage(richMenuId, fs.createReadStream('./images/icons_calendar.png'))
     const result2 =  await client.setDefaultRichMenu(richMenuId)
 }
 
